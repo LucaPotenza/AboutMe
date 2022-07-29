@@ -1,0 +1,21 @@
+.boxShadow{
+  box-shadow: 0px 5px 50px rgba(128, 128, 128, 0.44);
+  width: 100%;
+}
+
+.link{
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover{
+  color: white;
+  background-color: transparent;
+  text-shadow: 1px 0px 10px rgba(255, 255, 255, 1);
+}
+
+.active{
+  color: white;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+}

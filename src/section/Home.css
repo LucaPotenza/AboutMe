@@ -1,0 +1,30 @@
+.h{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes scale-top-left {
+    0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .h-animation {
+      animation: scale-top-left 1s 1;
+    }
+  }
+  
+.foto {
+    height: 40vmin;
+    border: solid white 10px;
+    border-radius: 500%;
+    margin: 0;
+    box-shadow: 0px 0px 50px rgba(128, 128, 128, 0.44);
+  }

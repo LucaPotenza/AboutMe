@@ -1,0 +1,57 @@
+.cont{
+    background-color: rebeccapurple;
+    scroll-snap-align: start;
+}
+
+h1{
+    padding-top: 3vh;
+    height: 5vh;
+    text-align: center;
+    margin-left: 2vw;
+}
+
+p{
+    text-align: left;
+    margin-left: 3vw;
+}
+
+.card-img-top{
+    border-radius: 1em;
+    margin-top: 10px;
+    width: 90%;
+    height: auto;
+    max-height: 50%;
+}
+
+.card-text{
+    width: 100%;
+    height: auto;
+    max-height: 20vh;
+    overflow-y: scroll;
+}
+
+.Carousel{
+    position: relative;
+}
+
+.item{
+    width: 65vw;
+    height: auto;
+    background-image: linear-gradient(white, lightgray);
+    border-radius: 10px;
+}
+
+@media (min-width: 768px){
+    .item{
+        width: auto;
+        height: auto;
+        background-image: linear-gradient(white, lightgray);
+        border-radius: 10px;
+    }
+}
+
+@media (max-height: 400px){
+    .card-img-top{
+        display: none;
+    }
+}
