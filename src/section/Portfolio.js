@@ -1,27 +1,71 @@
-import { CardGroup , Card ,Button, CardImg, Row} from 'react-bootstrap';
-import ReactCardCarousel from "react-card-carousel";
+import { Card ,Button, CardImg, Row} from 'react-bootstrap';
 import { Element } from 'react-scroll';
+import { useState } from 'react';
 import './Portfolio.css'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 function Portfolio(){
 
-    
+    const [rot, setRot] = useState(true);
+
+    var msg = 'disattiva rotazione'
+    var speed = 5000
+
+    if(rot==false){
+        msg = 'attiva rotazione'
+    }
+
+    const responsive = {
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 1,
+          partialVisibilityGutter: 40 // this is needed to tell the amount of px that should be visible.
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 1,
+          partialVisibilityGutter: 30 // this is needed to tell the amount of px that should be visible.
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1,
+          partialVisibilityGutter: 30 // this is needed to tell the amount of px that should be visible.
+        }
+      }
 
     return(
         <Element className="cont bg-light section" name='Portfolio'>
-            <h1>Portfolio</h1>
-            <div style={{
-                margin: "5vh auto",
-                position: "relative",
-                height: "80vh",
-                width: "100%",
-                display: "flex",
-                flex: 1,
-                justifyContent: "center",
-                alignItems: "middle"
-                }}>
-                <ReactCardCarousel className='Carousel' autoplay={true} autoplay_speed={5000}>
-                    <Card className='item'>
+            <div className='title'>
+                <div className='titleSec'>
+
+                </div>
+                <div className='titleSec'>
+                    <h1>Portfolio</h1>
+                </div>
+                <div className='titleSec'>
+                    <p>{msg}</p>
+                    <label className="switch">
+                        <input type="checkbox" onChange={()=>{setRot(!rot);}} checked={rot}/>
+                        <span className="slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            
+            
+            <Carousel 
+                responsive={responsive}
+                infinite
+                autoPlay={rot}
+                autoPlaySpeed={500}
+                centerMode
+                swipeable
+                showDots
+                keyBoardControl
+                focusOnSelect
+                >
+            <Card className='item'>
                         <CardImg variant='top mx-auto' src={require("../CovidData1.png")} >
                         </CardImg>
                         <Card.Body>
@@ -55,8 +99,7 @@ function Portfolio(){
                             <Button variant="primary" href="https://www.dropbox.com/sh/al5n5l6aj8wkkqf/AAAUqwsYGE65jWkSyI4uewd5a?dl=0" target="_blank">Vedi</Button>
                         </Card.Body>
                     </Card>
-                </ReactCardCarousel>
-            </div>
+            </Carousel>
         </Element>
     )
 }

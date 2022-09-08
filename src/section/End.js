@@ -19,7 +19,7 @@ function End(){
                                 
                                         <div className="ms-2">
                                             <div className="fw-bold">Programmazione</div>
-                                            c,c++,java,javascript,html,css,react
+                                            c,c++,java,javascript(html,css),react
                                         </div>
                                     
                                         <div className="ms-2">
@@ -31,16 +31,16 @@ function End(){
                             </Col>
                             <Col  sm={6}>
                                 <ListGroup variant="flush">
-                                    <ListGroup.Item><h3>3D art</h3></ListGroup.Item>
+                                    <ListGroup.Item><h3>3D</h3></ListGroup.Item>
                                 
                                         <div className="ms-2">
-                                            <div className="fw-bold">Programmazione</div>
-                                            c,c++,java,javascript,html,css,react
+                                            <div className="fw-bold">Blender</div>
+                                            modelling,uv-mapping,shading,phisics simulation
                                         </div>
                                     
                                         <div className="ms-2">
-                                            <div className="fw-bold">Database</div>
-                                            SQL , MongoDB
+                                            <div className="fw-bold">Substance painter</div>
+                                            Texture Painting
                                         </div>
 
                                 </ListGroup>
